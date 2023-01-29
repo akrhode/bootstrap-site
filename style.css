@@ -5,10 +5,34 @@ body{
 /*Navigation*/
 .nav-link{
   cursor: pointer;
+ 
+}
+
+.nav-link::after{
+  content: '';
+  transition: all 0.2s;
+  opacity: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #ffff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.nav-link:hover::after{
+  opacity: 1;
 }
 
 
-/*slider*/
+/*Modal*/
+#modal-content{
+font-size: 16px;
+color: black;
+}
+
+
+/*Slider*/
 .c-item {
   height: 480px;
 }
@@ -19,10 +43,27 @@ body{
   filter: brightness(0.7);
 }
 
+/*Overview Section*/
 .overview{
   height: 180px;
 }
 
 .icon{
   fill: #ffff;
+}
+
+/*Cards*/
+.card-body{
+  font-size: 16px;
+  color: black;
+}
+
+/*Gallery*/
+
+.gallery{
+padding: 80px 0;
+}
+
+.gallery img{
+  max-width: 100%;
 }

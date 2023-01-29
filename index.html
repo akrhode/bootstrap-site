@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tokyo Kitchen 東京 料理</title>
-    
+    <title>Tokyo Kitchen</title>
+    <link rel="icon" href="img/favicon.png">
+
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,20 +29,17 @@
 <main>
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark pt-lg-2">
   <div class="container">
-    <a class="navbar-brand" href="#">東京 料理</a>
+    <a class="navbar-brand">東京 料理</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#start">Start</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#products">Our Menu</a>
+          <a class="nav-link  text-white" href="#set-section">Menu</a>
         </li>     
         <li class="nav-item">
-          <a class="nav-link text-white" href="#faq">FAQ</a>
+          <a class="nav-link text-white" href="#faq-section">FAQ</a>
         </li>    
     </div>
   </div>
@@ -49,24 +47,60 @@
 
 <!--Modal-->
 <section>
-<section class="modal fade" tabindex="-1" id="reservation-modal">
+<section class="modal fade" tabindex="-1" id="order-modal">
   <div class="modal-dialog">
-    <div class="modal-content">
+    <div class="modal-content" id="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
+        <h5 class="modal-title">Order Placement</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+
+      <!--Modal Form-->
       <div class="modal-body">
-        <p>Modal body text goes here.</p>
+        <form class="row g-3">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Select a Set</option>
+            <option value="1">Basic Set</option>
+            <option value="2">Party Set</option>
+            <option value="3">Dessert Set</option>
+          </select>
+
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail4">
+          </div>
+          <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Password</label>
+            <input type="password" class="form-control" id="inputPassword4">
+          </div>
+          <div class="col-12">
+            <label for="inputAddress" class="form-label">Address</label>
+            <input type="text" class="form-control" id="inputAddress">
+          </div>
+          
+          <div class="col-md-6">
+            <label for="inputCity" class="form-label">City</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">State</label>
+            <input type="text" class="form-control" id="inputState">
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="inputZip" class="form-label">Zip</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
+          </div>
+        </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Reserve</button>
+        
+        <button type="button" class="btn btn-primary">Order</button>
       </div>
     </div>
   </div>
 </section>
-
 
 
 <!--Image Slider-->
@@ -84,23 +118,23 @@
       <div class="carousel-caption top-0 mt-4">
         <p class="mt-6 fs-3 text-uppercase">Discover authentic Japanese sushi</p>
         <h1 class="display-1 fw-bolder text-capitalize">Tokyo Kitchen</h1>
-        <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal" data-bs-target="#reservation-modal">Reservation</button>
+        <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal" data-bs-target="#order-modal">Order</button>
       </div>
     </div>
     <div class="carousel-item c-item">
       <img src="img/sushi2.jpg" class="d-block w-100 c-img" alt="Slide 2">
       <div class="carousel-caption top-0 mt-4">
-        <p class="mt-6 fs-3 text-uppercase">Made from the finest ingredients</p>
-        <h1 class="display-1 fw-bolder text-capitalize">Original flavour</h1>
-        <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal" data-bs-target="#reservation-modal">Reservation</button>
+        <p class="mt-6 fs-3 text-uppercase">We guarantee</p>
+        <h1 class="display-1 fw-bolder text-capitalize">Exquisite flavour</h1>
+        <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal" data-bs-target="#order-modal">Order</button>
       </div>
     </div>
     <div class="carousel-item c-item">
       <img src="img/sushi3.jpg" class="d-block w-100 c-img" alt="Slide 3">
       <div class="carousel-caption top-0 mt-4">
-        <p class="mt-6 fs-3 text-uppercase">Always at your disposal</p>
-        <h1 class="display-1 fw-bolder text-capitalize">Fast delivery</h1>
-        <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal" data-bs-target="#reservation-modal">Reservation</button>
+        <p class="mt-6 fs-3 text-uppercase">We ensure</p>
+        <h1 class="display-1 fw-bolder text-capitalize">Fast Delivery</h1>
+        <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal" data-bs-target="#order-modal">Order</button>
       </div>
     </div>
   </div>
@@ -115,6 +149,7 @@
 </button>
 </section>
 
+
 <!--Overview Section-->
 <section class="overview">
   <div class="container h-100 d-flex align-items-center bg-dark">
@@ -123,10 +158,10 @@
         <i class="bi bi-award-fill me-3"></i>Award Winner
       </div>
       <div class="col-xl">
-        <i class="bi bi-alarm-fill me-3"></i>Fast Delivery
+        <i class="bi bi-alarm-fill me-3"></i>Delivery within 20 min
       </div>
       <div class="col-xl">
-        <i class="bi bi-hand-thumbs-up-fill me-3"></i></i>100% Satisfaction Rate
+        <i class="bi bi-hand-thumbs-up-fill me-3"></i>100% Satisfaction Rate
       </div>
     </div>
 </div>
@@ -134,15 +169,121 @@
 
 
 <!--Menu Section-->
+<section id="set-section" class="pt-5">
+<h2 class="text-center my-5">Menu
+</h2>
+
+<div class="container">
+<div class="row">
+<div class="col-lg">
+  <div class="card" style="width: 18rem;">
+    <img src="img/sushi4.jpg" class="card-img-top" alt="Menu 1">
+    <div class="card-body">
+      <h5 class="card-title">Basic Set</h5>
+      <p class="card-text">Eligendi amet neque ex beatae aut, repellendus odit.</p>
+      <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#order-modal">Order</a>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg">
+  <div class="card" style="width: 18rem;">
+    <img src="img/sushi5.jpg" class="card-img-top" alt="Menu 2">
+    <div class="card-body">
+      <h5 class="card-title">Party Set</h5>
+      <p class="card-text">Eligendi repellendus doloremque ipsam molestiae totam veritatis.</p>
+      <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#order-modal">Order</a>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg">
+  <div class="card" style="width: 18rem;">
+    <img src="img/wagashi.jpg" class="card-img-top" alt="Menu 3">
+    <div class="card-body">
+      <h5 class="card-title">Dessert Set</h5>
+      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#order-modal">Order</a>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</section>
 
 
-<!--Address & Opening Hours-->
+<!--FAQ-->
+<section id="faq-section" class="py-md-5">
+  <h2 class="my-5 text-center">FAQ</h2>
+
+  <div class="container">
+  <div class="accordion w-75 mx-auto bg-secondary" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <strong>How do I order?</strong>
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat commodi nihil hic harum odit alias magnam quisquam earum fugit iure debitis non, soluta aliquid velit aspernatur nisi delectus molestias consequatur?
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <strong>What if there is a problem with my order?</strong>
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio autem, quaerat cumque alias placeat dolores corporis error officiis accusamus! Iste asperiores blanditiis error debitis veniam aliquid illo laudantium perspiciatis repellat?
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <strong>How can I reserve a table?</strong>
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cumque, odio ipsum pariatur magni aspernatur ratione numquam culpa error minus corrupti, quae velit, asperiores excepturi sit ullam esse! Porro, voluptatem.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!--Gallery-->
+<section class="gallery py-md-5">
+  <h2 class="text-center my-5">Gallery
+  </h2>
+  <div class="container-lg">
+    <div class="row row-cols-1 row-cols-2">
+      <div class="col">
+        <img src="img/bar.jpg" class="gallery-item" alt="Gallery 1">
+      </div>
+      <div class="col">
+        <img src="img/drinks.jpg" class="gallery-item" alt="Gallery 2">
+      </div>
+    </div>
+  </div>
+
+</section>
 
 </main>
+
 <!--Footer-->
-<footer>
-
-
+<footer class="bg-dark py-5 mt-5">
+  <div class="container text-light text-center">
+    <p class="display-5 mb-3">Tokyo Kitchen</p>
+    <p><small class="text-white-80">Any Street, ZIP, Any Town</small></p>
+    <small class="text-white-50">&copy; Copyright by A. Rhode. All rights reserved.</small>
+  </div>
 </footer>
   </body>
 </html>
