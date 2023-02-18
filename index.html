@@ -27,26 +27,29 @@
 <body class="bg-dark text-white">
 <!--Navbar-->
 <main>
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark pt-lg-2">
+<nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark pt-lg-2">
   <div class="container">
-    <a class="navbar-brand">東京 料理</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+   <a class="navbar-brand">東京 料理</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link  text-white" href="#set-section">Menu</a>
-        </li>     
+          <a class="nav-link" href="#anchor-sets">Menu</a>
+        </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#faq-section">FAQ</a>
-        </li>    
+          <a class="nav-link" href="#anchor-faq">FAQ</a>
+        </li>
+      </ul>
+      <img src="img/sushi6.png" alt="Sushi-Label" width="30" height="30">
+      
     </div>
   </div>
 </nav>
 
 <!--Modal-->
-<section>
+<section class="hero">
 <section class="modal fade" tabindex="-1" id="order-modal">
   <div class="modal-dialog">
     <div class="modal-content" id="modal-content">
@@ -70,8 +73,8 @@
             <input type="email" class="form-control" id="inputEmail4">
           </div>
           <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Password</label>
-            <input type="password" class="form-control" id="inputPassword4">
+            <label for="inputName" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="inputName">
           </div>
           <div class="col-12">
             <label for="inputAddress" class="form-label">Address</label>
@@ -88,7 +91,7 @@
             </select>
           </div>
           <div class="col-md-2">
-            <label for="inputZip" class="form-label">Zip</label>
+            <label for="inputZip" class="form-label">ZIP</label>
             <input type="text" class="form-control" id="inputZip">
           </div>
           </div>
@@ -96,7 +99,7 @@
       </div>
       <div class="modal-footer">
         
-        <button type="button" class="btn btn-primary">Order</button>
+        <button type="button" class="btn btn-primary btn-lg">Order</button>
       </div>
     </div>
   </div>
@@ -114,24 +117,27 @@
 
   <div class="carousel-inner">
     <div class="carousel-item active c-item">
-      <img src="img/sushi1.jpg" class="d-block w-100 c-img" alt="Slide 1">
+      <img src="img/sushi1.jpg" class="d-block w-100 c-img" alt="Sushi Slide 1">
       <div class="carousel-caption top-0 mt-4">
+        <br><br>
         <p class="mt-6 fs-3 text-uppercase">Discover authentic Japanese sushi</p>
         <h1 class="display-1 fw-bolder text-capitalize">Tokyo Kitchen</h1>
         <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal" data-bs-target="#order-modal">Order</button>
       </div>
     </div>
     <div class="carousel-item c-item">
-      <img src="img/sushi2.jpg" class="d-block w-100 c-img" alt="Slide 2">
+      <img src="img/sushi2.jpg" class="d-block w-100 c-img" alt="Sushi Slide 2">
       <div class="carousel-caption top-0 mt-4">
+        <br><br>
         <p class="mt-6 fs-3 text-uppercase">We guarantee</p>
         <h1 class="display-1 fw-bolder text-capitalize">Exquisite flavour</h1>
         <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal" data-bs-target="#order-modal">Order</button>
       </div>
     </div>
     <div class="carousel-item c-item">
-      <img src="img/sushi3.jpg" class="d-block w-100 c-img" alt="Slide 3">
+      <img src="img/sushi3.jpg" class="d-block w-100 c-img" alt="Sushi Slide 3">
       <div class="carousel-caption top-0 mt-4">
+        <br><br>
         <p class="mt-6 fs-3 text-uppercase">We ensure</p>
         <h1 class="display-1 fw-bolder text-capitalize">Fast Delivery</h1>
         <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal" data-bs-target="#order-modal">Order</button>
@@ -169,11 +175,10 @@
 
 
 <!--Menu Section-->
-<section id="set-section" class="pt-5">
-<h2 class="text-center my-5">Menu
+<h2 id="anchor-sets" class="text-center my-5">Menu
 </h2>
-
-<div class="container">
+<section id="set-section" class="pt-2">
+<div class="menu-container">
 <div class="row">
 <div class="col-lg">
   <div class="card" style="width: 18rem;">
@@ -214,7 +219,7 @@
 
 <!--FAQ-->
 <section id="faq-section" class="py-md-5">
-  <h2 class="my-5 text-center">FAQ</h2>
+  <h2 id="anchor-faq" class="my-5 text-center">FAQ</h2>
 
   <div class="container">
   <div class="accordion w-75 mx-auto bg-secondary" id="accordionExample">
@@ -265,10 +270,10 @@
   <div class="container-lg">
     <div class="row row-cols-1 row-cols-2">
       <div class="col">
-        <img src="img/bar.jpg" class="gallery-item" alt="Gallery 1">
+        <img src="img/bar.jpg" class="gallery-item" alt="Restaurant Interior">
       </div>
       <div class="col">
-        <img src="img/drinks.jpg" class="gallery-item" alt="Gallery 2">
+        <img src="img/drinks.jpg" class="gallery-item" alt="Restaurant Bar">
       </div>
     </div>
   </div>
